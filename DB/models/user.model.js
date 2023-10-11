@@ -74,10 +74,6 @@ const userSchema = new Schema({
     },
     coverImages: [{ url: String, id: String }],
     forgotCode: String,
-    tasks: [{
-        type: Types.ObjectId,
-        ref: 'Task'
-    }]
 }, { timestamps: true })
 // model
 const userModel = mongoose.models.User || model("User", userSchema)

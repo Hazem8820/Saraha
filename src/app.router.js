@@ -1,7 +1,7 @@
 import { globalErrorHandler } from "./utils/globalErrorHandling.js"
 import authRouter from '../src/modules/auth/auth.router.js'
 import userRouter from '../src/modules/user/user.router.js'
-import taskRouter from '../src/modules/task/task.router.js'
+import messageRouter from '../src/modules/message/message.router.js'
 import connectDB from "../DB/connection.js"
 import cors from "cors"
 const appRouter = (express, app) => {
@@ -27,7 +27,7 @@ const appRouter = (express, app) => {
     connectDB()
     app.use('/auth', authRouter)
     app.use('/user', userRouter)
-    app.use('/task', taskRouter)
+    app.use('/message', messageRouter)
     app.all("*", (req, res, next) => { next(new Error("End Point Not Found", { cause: 404 })) })
     app.use(globalErrorHandler)
 }

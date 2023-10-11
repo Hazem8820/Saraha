@@ -17,10 +17,7 @@ export const globalValidation = {
     gender: Joi.string().required(),
     code: Joi.string().length(5).required(),
     _id: Joi.string().custom(idValidation).required(),
-    title: Joi.string().min(5).max(80).required(),
-    description: Joi.string().required(),
-    status: Joi.string().required(),
-    deadline: Joi.string().required()
+    content: Joi.string().min(10).required()
 }
 
 export const validation = (Schema) => {

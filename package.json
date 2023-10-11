@@ -1,7 +1,7 @@
 {
-  "name": "e-commerce",
+  "name": "saraha",
   "version": "1.0.0",
-  "description": "e-commerce_app",
+  "description": "saraha_app",
   "main": "index.js",
   "type": "module",
   "scripts": {
